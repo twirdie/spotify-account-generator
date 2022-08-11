@@ -50,19 +50,14 @@ url = "https://spclient.wg.spotify.com/signup/public/v1/account"
 
 
 headers = {
-  'authority': 'spclient.wg.spotify.com',
-  'sec-ch-ua': '"Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"',
-  'sec-ch-ua-mobile': '?0',
-  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36',
-  'sec-ch-ua-platform': '"Windows"',
-  'content-type': 'application/x-www-form-urlencoded',
-  'accept': '*/*',
-  'origin': 'https://www.spotify.com',
-  'sec-fetch-site': 'same-site',
-  'sec-fetch-mode': 'cors',
-  'sec-fetch-dest': 'empty',
-  'referer': 'https://www.spotify.com/',
-  'accept-language': 'en-US,en;q=0.9'
+            "Host": "spclient.wg.spotify.com",
+            "Content-Type": "application /x-www-form-urlencoded",
+            "Connection": "keep-alive",
+            "Accept": "*/*",
+            "User-Agent": "Spotify/8.5.7iOS/13.5.1(iPhone12, 8)",
+            "Accept-Language": "fr, en;q = 0.01",
+            "Content-Length": "283",
+            "Accept-Encoding": "gzip,deflate,br",
 }
 
 
@@ -77,9 +72,9 @@ def mainfunction():
     if x == "y":
         while True:
             number = 0
-            Email = random_char(17)+"@protonmail.com"
+            Email = random_char(17)+"@outlook.com.tr"
             password = random_char(5)+"twirdie1337"
-            payload=f'birth_day=2&birth_month=02&birth_year=1989&collect_personal_info=undefined&creation_flow=&creation_point=https%3A%2F%2Fwww.spotify.com%2Fus%2F&displayname=twirdie1337&gender=male&iagree=1&key=a1e486e2729f46d6bb368d6b2bcda326&platform=www&referrer=&send-email=0&thirdpartyemail=1&email={Email}&password={password}&password_repeat={password}'
+            payload=f'birth_day=2&birth_month=02&birth_year=1989&collect_personal_info=undefined&creation_flow=&creation_point=https%3A%2F%2Fwww.spotify.com%2Fus%2F&displayname=twirdie1337&gender=male&iagree=1&key=bff58e9698f40080ec4f9ad97a2f21e0&platform=iOS-ARM&creation_flow=mobile_email&send-email=0&thirdpartyemail=1&email={Email}&password={password}&password_repeat={password}'
             response = requests.request("POST", url, headers=headers, data=payload)
             print(f"[{g}WORKING{y} twirdie1337{re}] " + Email + ":" + password + " (SAVED)")
             hits = open("hits.txt","a")
