@@ -33,7 +33,7 @@ def drawshit():
           | $$                                        /$$  | $$
           | $$                                       |  $$$$$$/
           |__/                                        \______/ 
- {y}xd
+ {y}LMAO
  Github.com/twirdie{re}   
     ''')
 
@@ -77,13 +77,13 @@ def mainfunction():
     if x == "y":
         while True:
             number = 0
-            Email = random_char(17)+"@outlook.com.tr"
+            Email = random_char(17)+"@protonmail.com"
             password = random_char(5)+"twirdie1337"
             payload=f'birth_day=2&birth_month=02&birth_year=1989&collect_personal_info=undefined&creation_flow=&creation_point=https%3A%2F%2Fwww.spotify.com%2Fus%2F&displayname=twirdie1337&gender=male&iagree=1&key=a1e486e2729f46d6bb368d6b2bcda326&platform=www&referrer=&send-email=0&thirdpartyemail=1&email={Email}&password={password}&password_repeat={password}'
             response = requests.request("POST", url, headers=headers, data=payload)
             print(f"[{g}WORKING{y} twirdie1337{re}] " + Email + ":" + password + " (SAVED)")
             hits = open("hits.txt","a")
-            hits.write(Email + ":" + password + " | twirdie1337" + "\n")
+            hits.write(Email + ":" + password + " | Github.com/twirdie" + "\n")
             hits.close
 
 
