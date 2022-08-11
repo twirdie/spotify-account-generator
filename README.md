@@ -5,4 +5,4 @@ Spotify Account Generator
 
 
 
-Just you should run "main.py"
+You just should run "main.py"
